@@ -1,19 +1,17 @@
 //James Jackson SDI 1302 Assignment 2
 
-//Argument Conditional using "if statement" to something
-
-//send output to console
+//Argument Conditional using "if statement" to something, send output to console
 
 
 var SeriesLength = 36;
 
 if(SeriesLength == 36){
 
-console.log ("We are talking about one of the 36");
+console.log ("This is about Yoshitoshi's 36 Ghosts.");
 
 }else{
 
-console.log ("We are not talking about one of our series.");
+console.log ("We can't be talking about 36 Ghosts if there are not 36 prints in the series!");
 
 }
 
@@ -21,43 +19,40 @@ console.log ("We are not talking about one of our series.");
 
 //Comparison conditional using "if statement" sending two arguments
 
-//Return a value from the declared function
-
- 
-
 if(SeriesLength == 36){
 
-console.log ("It is the right number of paintings!")
+console.log ("First we must check it is the right number of paintings!")
 
 }
 
 if(SeriesLength > 36){
 
-console.log ("It is too many works to be the 36 Views of Mt Fuji or 36 Ghosts.")
+console.log ("It is too many works to be the 36 Ghosts.")
 
 }
 
 if(SeriesLength > 36 && SeriesLength < 36){
 
-console.log ("It is definitely not the 36 Views of Mt Fuji or 36 Ghosts.")
+console.log ("It is definitely not the 36 Ghosts.")
 
 }
+
 
  
 
 //Number Function with "While Loop"
 
-var viewsOfMtFuji = 36
+var ThirtySixGhosts = 36;
 var prints = function(total) {
-var views = 0;
-while (views < viewsOfMtFuji) {
-        console.log("Hokusai is said to have created " + views + " views of Mt Fuji, or maybe")
-                views+=4;
+var ghosts = 0;
+while (ghosts < ThirtySixGhosts) {
+        console.log("Yoshitoshi's series depicts " + ghosts + " unique ghost stories, totaling")
+                ghosts+=4;
 };
-return viewsOfMtFuji;
+return ThirtySixGhosts;
 
 }
-console.log ( prints (" is the total number of views of Mt Fuji by Hokusai."));
+console.log ( prints (" is the total number of prints of monsters and ghosts by Yoshitoshi."));
 
  
 
@@ -66,23 +61,25 @@ console.log ( prints (" is the total number of views of Mt Fuji by Hokusai."));
 var ghosts = "Ghosts "; 
 var monsters = "monsters ";
 
-console.log(ghosts + " and " + monsters + " are found throughout his work.");
+console.log(ghosts + "and " + monsters + " are found throughout his work.");
 
 //Array Function with Math
 
 var Master = [
-        "Hokusai",
-        "Yoshitoshi",
-        "Kuniyoshi"
+        "Oya Taro Mitsukuni",
+        "Onogawa Kisaburo",
+        "Shobu"
 ];
 
 var modifiers = [
-        "Oldest",
-        "Craziest",
-        "Youngest",
+        "a retainer who saw a vision of hundreds of skeletons fighting.",
+        "a great sumo wrestler who encounters a monster while standing guard in his master's castle.",
+        "a master archer that slays a serpent spirit responsible for slaying several military elephants.",
 ];
 
 for (var i=0, j=Master.length; i < j; i++) {
 
-        console.log ( "Master " + Master[i] + " was " + modifiers[i] );
+        console.log ( "The story of " + Master[i] + " is about " + modifiers[i] );
 };
+
+console.log ("Hope you know a little more about Yoshitoshi's 36 Ghosts!");
