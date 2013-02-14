@@ -7,7 +7,7 @@ var SeriesLength = 36;
 
 if(SeriesLength == 36){
 
-console.log ("This is about Yoshitoshi's 36 Ghosts.");
+console.log ("This is a narrative about Yoshitoshi's 36 Ghosts.");
 
 }else{
 
@@ -21,7 +21,7 @@ console.log ("We can't be talking about 36 Ghosts if there are not 36 prints in 
 
 if(SeriesLength == 36){
 
-console.log ("First we must check it is the right number of paintings!")
+console.log ("First let's count the number of woodblock prints!")
 
 }
 
@@ -33,12 +33,10 @@ console.log ("It is too many works to be the 36 Ghosts.")
 
 if(SeriesLength > 36 && SeriesLength < 36){
 
-console.log ("It is definitely not the 36 Ghosts.")
+console.log ("It is too many or too few to be the 36 Ghosts.")
 
 }
 
-
- 
 
 //Number Function with "While Loop"
 
@@ -61,7 +59,7 @@ console.log ( prints (" is the total number of prints of monsters and ghosts by 
 var ghosts = "Ghosts "; 
 var monsters = "monsters ";
 
-console.log(ghosts + "and " + monsters + " are found throughout his work.");
+console.log(ghosts + "and " + monsters + " are found throughout this work.");
 
 //Array Function with Math
 
@@ -82,4 +80,4 @@ for (var i=0, j=Master.length; i < j; i++) {
         console.log ( "The story of " + Master[i] + " is about " + modifiers[i] );
 };
 
-console.log ("Hope you know a little more about Yoshitoshi's 36 Ghosts!");
+console.log ("I hope you know a little more about Yoshitoshi's 36 Ghosts now!");
