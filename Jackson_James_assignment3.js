@@ -117,6 +117,18 @@ var stories = [
 
 ];
 
+
+//#7 JSON Entry
+
+var retrievePrints = function (json) {
+    for (var i = 0; i < json.prints.length; i++){
+        var print = json.prints[i];
+        console.log("Print number " + print.printNumber + ", named " + print.printName +  ", print size "  + print.size + " inches is a favorite of mine from the series.");
+
+    }
+};
+
+retrievePrints(prints2)
 for (var i=0, j=Master.length; i < j; i++) {
 
     console.log ( "The story of " + Master[i] + " is about " + stories[i] );
@@ -125,13 +137,8 @@ for (var i=0, j=Master.length; i < j; i++) {
 console.log ("These are only the first 23, but I hope you know a little more about Yoshitoshi's 36 Ghosts now!");
 
 
-//#7 JSON Entry
 
-var handleData = function (json) {
-    for (var i = 0; i < json.friends.length; i++){
-        var friend = json.friends[i];
-        console.log("User ID; " + friend.uuid + " , Name: " + friend.name + ", Age: " + friend.age);
-    };
-};
+
+
 
 
