@@ -14,34 +14,33 @@ var Master
 var stories
 var artist
 var woodblock
+var retrievePrints
 
 
 //Nested Loop
 
-var artistGroup = 1;
-var year = 1785;
-var period = 0;
-if(artistGroup == 1 || artistGroup == 2)
+var artist = "Yoshitoshi";
+var year = 1780;
+var period;
+
+if(artist = "Yoshitoshi")
 {
     if(year >=1700 && year <= 1779)
         period = "Early Ukiyo-e";
     else
         period = "Golden Age of Ukiyo-e";
-    console.log("The period we are discussing is the " + period + ".");
 }
-else if(artistGroup == 1 || artistGroup == 2)
+else
+if(artist = "Watanabe Shotei")
 {
-    if(year >=1868 && year <= 1912)
+    if(year >= 1868 && year <= 1912)
         period = "Meiji Period";
     else
         period = "Modern and Contemporary";
-    console.log("The period we are discussing is the " + period + ".");
 }
-else
-    console.log("The period we are discussing is the " + period + ".");
+alert ("The period we are discussing is the " + period + ".");
 
-//I wanted to create another set of arguments that further defined the categories foe the artist i.e. 1 & 2
-//It works as is, but could use embellishment
+//I want to create another set of arguments that further defined the categories for the artist
 
 
 //#2 Procedure
@@ -58,7 +57,7 @@ if (yoshitoshi === true) {
 }
 
 
-//#3 Boolean Conditional Function
+//#3 Boolean Conditional
 
 if(seriesLength > 36) {
     console.log ("It is too many works to be the 36 Ghosts.");
@@ -82,7 +81,7 @@ while (prints > 0) {
 console.log("Now I have no more prints left to count in this series.");
 
 
-//#5 String Function
+//#5 String Concatenation
 
 var g, m;
     g = 'Lots of ghosts ';
@@ -149,22 +148,31 @@ var stories = [
 ];
 
 
+
+for (var i=0, j=Master.length; i < j; i++) {
+
+console.log ( "The story of " + Master[i] + " is about " + stories[i] );
+
+};
+
+
 //#7 JSON Entry
 
 var retrievePrints = function (json) {
     for (var i = 0; i < json.prints.length; i++){
-        var print = json.prints[i];
+        var print = json.prints[i]
         console.log("Print number " + print.printNumber + ", named " + print.printName +  ", print size "  + print.size +
             " inches from the " + print.period [1] + " is a favorite of mine from the series.");
-
+        console.log("It is " + print.japanese + " that this is a truly unique Japanese art form.");
     }
 };
 
 retrievePrints(prints2)
-for (var i=0, j=Master.length; i < j; i++) {
 
-    console.log ( "The story of " + Master[i] + " is about " + stories[i] );
-};
+
+//Prologue
+
+
 
 console.log ("These are only the first 23, but I hope you know a little more about Yoshitoshi's 36 Ghosts now!");
 
