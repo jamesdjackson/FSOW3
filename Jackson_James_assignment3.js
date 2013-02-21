@@ -1,56 +1,58 @@
 //SDI Project 3
 
 //#1 Global Variable Declarations
-var artistGroup
-var year
-var period
-var yoshitoshi
-var thirtySixGhosts
-var seriesLength
-var prints
-var g
-var m
-var Master
-var stories
-var artist
-var woodblock
-var retrievePrints
 
+var artist;
+var artistGroup;
+var year;
+var period;
+var yoshitoshi;
+var oneHundredGhosts;
+var seriesLength;
+var prints;
+var ghosts;
+var monsters;
+var character;
+var stories;
+var artist;
+var woodblock;
+var retrievePrints;
 
 //Nested Loop
 
-var artist = "Yoshitoshi";
-var year = 1780;
-var period;
+artist = "Yoshitoshi";
+year = 1780;
 
-if(artist = "Yoshitoshi")
+if(artist == "Yoshitoshi" || year == 1775)
 {
-    if(year >=1700 && year <= 1779)
+    if(year >= 1700 && year <= 1779)
         period = "Early Ukiyo-e";
     else
         period = "Golden Age of Ukiyo-e";
 }
-else
-if(artist = "Watanabe Shotei")
+else if (artist == "Watanabe Shotei" || year == 1913)
 {
     if(year >= 1868 && year <= 1912)
         period = "Meiji Period";
     else
         period = "Modern and Contemporary";
 }
-alert ("The period we are discussing is the " + period + ".");
 
-//I want to create another set of arguments that further defined the categories for the artist
+alert ("Our story is about " + artist +" and takes place in the " + period + ".");
+
+//I wanted to create a routine that described artists that worked in multiple periods.  The period
+//same artist could be the same under a range of years under different "periods."  It is also directly tied
+//into the broader Yoshitoshi theme.
 
 
 //#2 Procedure
 
-var yoshitoshi = true, thirtySixGhosts = true;
+var yoshitoshi = true, oneHundredGhosts = true;
 
 if (yoshitoshi === true) {
     console.log("This is about our print artist Yoshitoshi.");
-    if (thirtySixGhosts === true) {
-        console.log('This is about his print series "36 Ghosts".');
+    if (oneHundredGhosts === true) {
+        console.log('This is also about his print series "100 Ghosts of China".');
     }
 } else {
     console.log("This is neither our artist nor our prints!");
@@ -59,20 +61,19 @@ if (yoshitoshi === true) {
 
 //#3 Boolean Conditional
 
-if(seriesLength > 36) {
+if(seriesLength > 100) {
     console.log ("It is too many works to be the 36 Ghosts.");
-    if(seriesLength < 36) {
+    if(seriesLength < 100) {
        console.log("It is too many works to be the 36 Ghosts.");
     }
 }else {
-    console.log("Let's make sure this is the right number of works for the 36 Ghosts!");
+    console.log("Let's make sure this is the right number of works for the 100 Ghosts of China!");
 }
 
 
 //#4 Number Function
 
-var prints = 36;
-
+var prints = 100;
 while (prints > 0) {
     console.log(prints + " of the prints are left to count to make sure.");
     prints--;
@@ -83,16 +84,16 @@ console.log("Now I have no more prints left to count in this series.");
 
 //#5 String Concatenation
 
-var g, m;
-    g = 'Lots of ghosts ';
-    m = 'plenty of crazy monsters';
 
-console.log(g + "and " + m + " are found throughout this work.");
+ghosts = 'Lots of ghosts ';
+monsters = 'plenty of crazy monsters';
+
+console.log(ghosts + "and " + monsters + " are found throughout this work.");
 
 
 //#6 Array with Math
 
-var Master = [
+var character = [
     "Samanosuke Mitsutoshi",
     "Lord Sadanobu",
     "Oda Harunaga",
@@ -116,10 +117,7 @@ var Master = [
     "Nikki Dansei Naonori",
     "Shusuinosuke Tobe Suetake",
     "Miyamoto Musashi"
-
 ];
-
-
 var stories = [
     "a great retainer who's saved a close friend's daughter who was bewitched by a fox.",
     "a powerful government figure whom was attacked by a demon in the emperor's southern palace.",
@@ -144,14 +142,10 @@ var stories = [
     "a ruthless traitor that attempted to murder his infant master in his sleep.",
     "a famous retainer who is said to have encountered the ghost of a pregnant woman late one evening.",
     "a great sword fighter that defeated an acetic mountain man that turned into a tengu or heavenly dog after being killed.",
-
 ];
+for (var i=0, j=character.length; i < j; i++) {
 
-
-
-for (var i=0, j=Master.length; i < j; i++) {
-
-console.log ( "The story of " + Master[i] + " is about " + stories[i] );
+console.log ("The story of " + character[i] + " is about " + stories[i]);
 
 };
 
@@ -160,21 +154,19 @@ console.log ( "The story of " + Master[i] + " is about " + stories[i] );
 
 var retrievePrints = function (json) {
     for (var i = 0; i < json.prints.length; i++){
-        var print = json.prints[i]
+        var print = json.prints[i];
         console.log("Print number " + print.printNumber + ", named " + print.printName +  ", print size "  + print.size +
             " inches from the " + print.period [1] + " is a favorite of mine from the series.");
-        console.log("It is " + print.japanese + " that this is a truly unique Japanese art form.");
+
+        console.log("It is " + print.japanese + " this is a uniquely Japanese inspired theme and story.");
     }
 };
 
 retrievePrints(prints2)
 
-
 //Prologue
 
-
-
-console.log ("These are only the first 23, but I hope you know a little more about Yoshitoshi's 36 Ghosts now!");
+console.log ("These are only the first 23, but I hope you know a little more about Yoshitoshi's 100 Ghosts of China now!");
 
 
 
