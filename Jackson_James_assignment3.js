@@ -1,7 +1,9 @@
 //SDI Project 3
 
 //#1 Global Variable Declarations
-
+var artistGroup
+var year
+var period
 var yoshitoshi
 var thirtySixGhosts
 var seriesLength
@@ -10,7 +12,36 @@ var g
 var m
 var Master
 var stories
+var artist
+var woodblock
 
+
+//Nested Loop
+
+var artistGroup = 1;
+var year = 1785;
+var period = 0;
+if(artistGroup == 1 || artistGroup == 2)
+{
+    if(year >=1700 && year <= 1779)
+        period = "Early Ukiyo-e";
+    else
+        period = "Golden Age of Ukiyo-e";
+    console.log("The period we are discussing is the " + period + ".");
+}
+else if(artistGroup == 1 || artistGroup == 2)
+{
+    if(year >=1868 && year <= 1912)
+        period = "Meiji Period";
+    else
+        period = "Modern and Contemporary";
+    console.log("The period we are discussing is the " + period + ".");
+}
+else
+    console.log("The period we are discussing is the " + period + ".");
+
+//I wanted to create another set of arguments that further defined the categories foe the artist i.e. 1 & 2
+//It works as is, but could use embellishment
 
 
 //#2 Procedure
@@ -20,7 +51,7 @@ var yoshitoshi = true, thirtySixGhosts = true;
 if (yoshitoshi === true) {
     console.log("This is about our print artist Yoshitoshi.");
     if (thirtySixGhosts === true) {
-        console.log('This is also his print series "36 Ghosts".');
+        console.log('This is about his print series "36 Ghosts".');
     }
 } else {
     console.log("This is neither our artist nor our prints!");
@@ -54,8 +85,8 @@ console.log("Now I have no more prints left to count in this series.");
 //#5 String Function
 
 var g, m;
-    g = 'Ghosts ';
-    m = 'monsters';
+    g = 'Lots of ghosts ';
+    m = 'plenty of crazy monsters';
 
 console.log(g + "and " + m + " are found throughout this work.");
 
@@ -123,7 +154,8 @@ var stories = [
 var retrievePrints = function (json) {
     for (var i = 0; i < json.prints.length; i++){
         var print = json.prints[i];
-        console.log("Print number " + print.printNumber + ", named " + print.printName +  ", print size "  + print.size + " inches is a favorite of mine from the series.");
+        console.log("Print number " + print.printNumber + ", named " + print.printName +  ", print size "  + print.size +
+            " inches from the " + print.period [1] + " is a favorite of mine from the series.");
 
     }
 };
@@ -135,9 +167,6 @@ for (var i=0, j=Master.length; i < j; i++) {
 };
 
 console.log ("These are only the first 23, but I hope you know a little more about Yoshitoshi's 36 Ghosts now!");
-
-
-
 
 
 
