@@ -1,4 +1,4 @@
-//SDI Project 3
+//SDI Project 3 "One Hundred Tales of Japan and China"
 
 //#1 Global Variable Declarations
 
@@ -52,7 +52,7 @@ var yoshitoshi = true, oneHundredGhosts = true;
 if (yoshitoshi === true) {
     console.log("This is about our print artist Yoshitoshi.");
     if (oneHundredGhosts === true) {
-        console.log('This is also about his print series "100 Ghosts of China".');
+        console.log('This is also about his print series "One Hundred Tales of Japan and China".');
     }
 } else {
     console.log("This is neither our artist nor our prints!");
@@ -62,12 +62,12 @@ if (yoshitoshi === true) {
 //#3 Boolean Conditional
 
 if(seriesLength > 100) {
-    console.log ("It is too many works to be the 36 Ghosts.");
+    console.log ("It is too many works to be the One Hundred Tales of Japan and China.");
     if(seriesLength < 100) {
-       console.log("It is too many works to be the 36 Ghosts.");
+       console.log("It is too many works to be the One Hundred Tales of Japan and China.");
     }
 }else {
-    console.log("Let's make sure this is the right number of works for the 100 Ghosts of China!");
+    console.log("It appears to be the right number of works for the One Hundred Tales of Japan and China, but let's make sure.");
 }
 
 
@@ -93,6 +93,9 @@ console.log(ghosts + "and " + monsters + " are found throughout this work.");
 
 //#6 Array with Math
 
+
+
+
 var character = [
     "Samanosuke Mitsutoshi",
     "Lord Sadanobu",
@@ -117,7 +120,11 @@ var character = [
     "Nikki Dansei Naonori",
     "Shusuinosuke Tobe Suetake",
     "Miyamoto Musashi"
+
 ];
+
+character.push("Kabe Fudesuke");
+
 var stories = [
     "a great retainer who's saved a close friend's daughter who was bewitched by a fox.",
     "a powerful government figure whom was attacked by a demon in the emperor's southern palace.",
@@ -134,7 +141,7 @@ var stories = [
     "a young courtesan summoned in the middle of the night by a mysterious ghost.",
     "a young vassal intrigued by stories of ghosts at a near by temple that decides to confront them.",
     "a retainer that lay ill in bed that was attacked by demons.",
-    "a beautiful woman that used her overpowered a kingdom and eventually caused a rebellion by disturbing Buddhist precepts.",
+    "a woman that overpowered a kingdom with her beauty and cunning and eventually caused a rebellion by disturbing local Buddhist precepts.",
     "a Chinese thunder god is sent to defeat an invading army.",
     "a hero of the 108 Suikoden story, he was able to conger magic by making mudra signs leading to his name Dragon Entering Clouds.",
     "a master archer that slays a serpent spirit responsible for slaying several military elephants.",
@@ -143,9 +150,18 @@ var stories = [
     "a famous retainer who is said to have encountered the ghost of a pregnant woman late one evening.",
     "a great sword fighter that defeated an acetic mountain man that turned into a tengu or heavenly dog after being killed.",
 ];
+
+stories.push("a woman who died while preying in devotion to her husband suffering a curse, her ghost remains.");
+
 for (var i=0, j=character.length; i < j; i++) {
 
+
 console.log ("The story of " + character[i] + " is about " + stories[i]);
+
+ //.push ( ) add value to end
+//.unshift () add value to begining of array
+//.pop() delete end item from array
+//.shift() delete item from beginning of array
 
 };
 
@@ -162,11 +178,17 @@ var retrievePrints = function (json) {
     }
 };
 
-retrievePrints(prints2)
+retrievePrints(printSet)
 
 //Prologue
 
-console.log ("These are only the first 23, but I hope you know a little more about Yoshitoshi's 100 Ghosts of China now!");
+
+console.log ("These are only the first 24, but I hope you know a little more about Yoshitoshi's One Hundred Tales of Japan and China!");
+
+
+
+
+
 
 
 

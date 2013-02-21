@@ -1,6 +1,6 @@
 //JSON data source
 
-var prints2 = {
+var printSet = {
     "prints": [
         {
             "japanese" : true,
