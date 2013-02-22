@@ -77,7 +77,7 @@ var prints = 100;
 while (prints > 0) {
     console.log(prints + " of the prints are left to count to make sure.");
     prints--;
-};
+}
 
 console.log("Now I have no more prints left to count in this series.");
 
@@ -92,8 +92,6 @@ console.log(ghosts + "and " + monsters + " are found throughout this work.");
 
 
 //#6 Array with Math
-
-
 
 
 var character = [
@@ -158,10 +156,6 @@ for (var i=0, j=character.length; i < j; i++) {
 
 console.log ("The story of " + character[i] + " is about " + stories[i]);
 
- //.push ( ) add value to end
-//.unshift () add value to begining of array
-//.pop() delete end item from array
-//.shift() delete item from beginning of array
 
 };
 
