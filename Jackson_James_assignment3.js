@@ -71,7 +71,7 @@ if(seriesLength > 100) {
 }
 
 
-//#4 Number Function
+//#4 Number Procedure
 
 var prints = 100;
 while (prints > 0) {
@@ -149,7 +149,8 @@ var stories = [
     "a great sword fighter that defeated an acetic mountain man that turned into a tengu or heavenly dog after being killed.",
 ];
 
-stories.push("a woman who died while preying in devotion to her husband suffering a curse, her ghost remains.");
+stories.push("a woman who died while preying in devotion to her husband suffering a curse, her ghost remains incased in a " +
+    " waterfall.");
 
 for (var i=0, j=character.length; i < j; i++) {
 
@@ -157,10 +158,10 @@ for (var i=0, j=character.length; i < j; i++) {
 console.log ("The story of " + character[i] + " is about " + stories[i]);
 
 
-};
+}
 
 
-//#7 JSON Entry
+//#7 JSON Function
 
 var retrievePrints = function (json) {
     for (var i = 0; i < json.prints.length; i++){
